@@ -1,0 +1,58 @@
+service: dyna-demo
+
+frameworkVersion: '3'
+configValidationMode: error
+
+package:
+  individually: true
+
+plugins:
+  - serverless-dynamodb-local
+
+custom:
+  aws:
+    accountId: ${param:accountId, 822260542507}
+
+  dynamodb:
+    stages:
+      - dev
+    start:
+      port: 8000
+      migrate: true
+      seed: true
+    seed:
+      dev:
+        sources:
+          - table: ${self:provider.stage}-dyna-demo
+            sources: [./seeds/dynamo/dyna-demo.json]
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'dev'}
+  region: sa-east-1
+  versionFunctions: false
+  disableRollback: false
+  logRetentionInDays: 3
+
+resources:
+  Resources:
+    DynaDemoTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:provider.stage}-dyna-demo
+        AttributeDefinitions:
+          - AttributeName: pk
+            AttributeType: S # string
+          - AttributeName: sk
+            AttributeType: S # string
+        KeySchema:
+          - AttributeName: pk
+            KeyType: HASH
+          - AttributeName: sk
+            KeyType: RANGE
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+
