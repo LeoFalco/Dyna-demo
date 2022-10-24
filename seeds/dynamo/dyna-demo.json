@@ -1,0 +1,48 @@
+[
+  {
+    "pk": "USER#fd98a33b-24d1-4288-a494-777527ecd185",
+    "sk": "fd98a33b-24d1-4288-a494-777527ecd185",
+    "name": "Leo",
+    "email": "leonardo@fake.com.br"
+  },
+  {
+    "pk": "SUBSCRIPTION#fd98a33b-24d1-4288-a494-777527ecd185",
+    "sk": "browser",
+    "subscriptionId": "5c93b003-36c6-484c-9ba1-67f134fc59f1",
+    "data": {
+      "some-data-here": ":)"
+    }
+  },
+  {
+    "pk": "SUBSCRIPTION#fd98a33b-24d1-4288-a494-777527ecd185",
+    "sk": "android",
+    "subscriptionId": "6daefe2f-90a6-4519-98ea-ab2c5bbb801d",
+    "data": {
+      "some-data-here": ":)"
+    }
+  },
+  {
+    "pk": "NOTIFICATION#5c93b003-36c6-484c-9ba1-67f134fc59f1",
+    "sk": "2022-03-28T05:19:58.000Z",
+    "title": "Atividade 987543647 adicionada",
+    "metadata": {
+      "identifier": "987543647"
+    }
+  },
+  {
+    "pk": "NOTIFICATION#5c93b003-36c6-484c-9ba1-67f134fc59f1",
+    "sk": "2022-03-28T06:19:58.000Z",
+    "title": "Atividade 17092022113723 adicionada",
+    "metadata": {
+      "identifier": "17092022113723"
+    }
+  },
+  {
+    "pk": "NOTIFICATION#5c93b003-36c6-484c-9ba1-67f134fc59f1",
+    "sk": "2022-03-28T07:19:58.000Z",
+    "title": "Atividade 496a1daef166 adicionada",
+    "metadata": {
+      "identifier": "496a1daef166"
+    }
+  }
+]

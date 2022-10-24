@@ -1,0 +1,27 @@
+{
+  "name": "Dyna-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npx serverless dynamodb install",
+    "start:dynamo": "npx serverless dynamodb start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeoFalco/Dyna-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeoFalco/Dyna-demo/issues"
+  },
+  "homepage": "https://github.com/LeoFalco/Dyna-demo#readme",
+  "devDependencies": {
+    "aws-sdk": "^2.1238.0",
+    "serverless": "^3.23.0",
+    "serverless-dynamodb-local": "^0.2.40"
+  }
+}
