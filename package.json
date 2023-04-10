@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/LeoFalco/Dyna-demo#readme",
   "devDependencies": {
-    "aws-sdk": "^2.1238.0",
+    "aws-sdk": "^2.1354.0",
     "serverless": "^3.23.0",
     "serverless-dynamodb-local": "^1.0.2"
   }
